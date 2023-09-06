@@ -11,7 +11,7 @@ $(() => {
   function addMessage(side) {
     let text = $("#message").val();
     var regex =
-      /(?<=(?:(?:https?:\/\/)?(?:www\.)?youtu(?:\.be\/|be\.com\/\S*(?:watch\/|embed\/))))(.*)|(\w+)$/gim;
+      /(?<=(?:(?:https?:\/\/)?(?:www\.)?youtu(?:\.be\/|be\.com\/\S*(?:watch\/|embed\/))))(.*)|((?:\w+|\s)+$)/gim;
     let match;
     let output = "";
     while ((match = regex.exec(text)) !== null) {
